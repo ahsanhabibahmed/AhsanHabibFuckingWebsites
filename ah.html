@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahsan Habib</title>
+    <link rel="shortcut icon" href="https://img.freepik.com/premium-vector/aa-monogram-logo-with-modern-design-that-combines-minimalist-aesthetics_715029-1427.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="ah.css">
+
+
+    <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#ff7ab6; --muted:#94a3b8; --glass: rgba(255,255,255,0.04);
+      --radius:14px; --mono:'Segoe UI', Roboto, sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#071029 0%, #0f1724 100%);font-family:var(--mono);color:#e6eef8}
+    .wrap{max-width:980px;margin:36px auto;padding:28px}
+    header{display:flex;gap:16px;align-items:center}
+    .logo{width:120px;height:120px;border-radius:16px;background:linear-gradient(135deg,var(--accent),#5ad3ff);display:grid;place-items:cover;font-weight:800;color:#081226;font-size:22px;box-shadow:0 6px 30px rgba(0,0,0,0.6)}
+    h1{margin:0;font-size:28px}
+    p.lead{margin:6px 0 18px;color:var(--muted)}
+
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:18px}
+    .card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+
+    .joke-box{min-height:160px;display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));font-size:18px}
+    .controls{display:flex;gap:10px;margin-top:12px}
+    button{background:var(--accent);border:none;padding:10px 14px;border-radius:10px;color:#081226;font-weight:700;cursor:pointer}
+    button.alt{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);font-weight:600}
+
+    .side h3{margin:0 0 8px}
+    .list{display:flex;flex-direction:column;gap:8px}
+    .chip{background:var(--glass);padding:8px 10px;border-radius:999px;color:var(--muted);font-size:14px}
+
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+
+    @media (max-width:880px){
+      .grid{grid-template-columns:1fr;}
+      .side{order:2}
+    }
+
+    .confetti{position:fixed;left:0;right:0;top:0;pointer-events:none;height:0}
+    .confetti span{position:absolute;width:8px;height:12px;background:var(--accent);opacity:0;transform:translateY(-40px) rotate(10deg);animation:fall 1200ms linear forwards}
+    @keyframes fall{to{opacity:1;transform:translateY(90vh) rotate(360deg)}}
+    </style>
+
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo" title="Adult Humor Zone">
+        <span style="font-size:20px"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS77wpxRrI0zz3SExNZKHGC18UqOpWxErdhPdNcUbD6SE9aLBDNGMMzF82jVdg&s" alt=""></span>
+      </div>
+      <div>
+        <h1>Ahsan Habib fucking Website</h1>
+        <p class="lead">Fast, sarcastic, chaotic jokes — share them, laugh hard, lighten your damn day. By Ahsan habib</p>
+      </div>
+    </header>
+
+    <main class="grid" style="margin-top:18px">
+      <section>
+        <div class="card">
+          <h2 style="margin-top:0">Quick Adult Joke Generator</h2>
+          <div id="joke" class="joke-box">Click a button to generate a joke — buckle up, you glorious mess.</div>
+
+          <div class="controls">
+            <button id="newJoke">New Joke</button>
+            <button class="alt" id="copyJoke">Copy</button>
+            <button class="alt" id="shareJoke">Share (URL)</button>
+          </div>
+
+          <div style="margin-top:12px;color:var(--muted);font-size:13px">
+            Category:
+            <span class="chip">Dark Humor</span>
+            <span class="chip">Adult Jokes</span>
+            <span class="chip">Sarcasm</span>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3 style="margin-top:0">What You Get Here</h3>
+          <ul style="margin:8px 0 0; padding-left:18px; color:var(--muted)">
+            <li>Sarcastic one-liners</li>
+            <li>Short chaotic meme texts</li>
+            <li>Everyday stupid life jokes</li>
+          </ul>
+        </div>
+      </section>
+
+      <aside class="side">
+        <div class="card">
+          <h3>Customize Your Chaos</h3>
+          <div style="margin-top:10px;color:var(--muted);font-size:14px">
+            Add your own jokes, save favorites, or share your personalized joke page.
+          </div>
+
+          <div style="margin-top:12px" class="list">
+            <div class="chip">Add your joke (beta)</div>
+            <div class="chip">Save favorites</div>
+            <div class="chip">Dark mode (auto)</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px;text-align:center">
+          <h3 style="margin:4px 0">Share the Laughs</h3>
+          <div style="margin-top:8px;color:var(--muted);font-size:13px">
+            Comment your best joke — if it's good enough, I'll add it to the site.
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      © Ahsan Habib fucking Website • Built with Ahsan Habib • You are responsible for your own jokes, you chaotic legend.Rview me in my g-mail = habibahmed2000u@gmail.com
+    </footer>
+  </div>
+
+  <div class="confetti" id="confetti"></div>
+
+  <script>
+    // Adult jokes with medium swearing
+    const jokes = [
+      "Mr.Ahsan Habib is the inventor of this website.Fuck you all guys,All madarcod ",
+      "My life is basically a collection of 'WTF was that?' moments on repeat.",
+      "I’m not saying you're dumb, but if there was a competition, you'd be in the finals for sure.",
+      "Fuck you all madercod ,.. -> Ahsan Habib.",
+      "If laziness was an Olympic sport, I wouldn't go… because I'd be too damn lazy.",
+      "I don’t need anger management, I need people to stop acting like idiots.",
+      "If I ever go missing, follow my last Google search. It’s probably 'how to disappear without telling these assholes'.",
+      "I’m not anti-social, I’m just allergic to stupidity.",
+      "My brain: ‘Don't say it.’ Me: *says it.* My life: ‘Well, shit.’",
+      "I'm not rude. I'm honest. There's a difference, asshole."
+    ];
+
+    const jokeEl = document.getElementById('joke');
+    const newJokeBtn = document.getElementById('newJoke');
+    const copyBtn = document.getElementById('copyJoke');
+    const shareBtn = document.getElementById('shareJoke');
+
+    function pick(){
+      const i = Math.floor(Math.random()*jokes.length);
+      return {i, text: jokes[i]};
+    }
+
+    function showJ(j){
+      jokeEl.textContent = j.text;
+      confettiBurst();
+      history.replaceState(null, '', '#joke=' + j.i);
+    }
+
+    newJokeBtn.addEventListener('click', ()=> showJ(pick()));
+
+    copyBtn.addEventListener('click', async ()=>{
+      try{
+        await navigator.clipboard.writeText(jokeEl.textContent);
+        copyBtn.textContent = 'Copied ✔';
+        setTimeout(()=> copyBtn.textContent = 'Copy',1200);
+      }catch(e){
+        copyBtn.textContent = 'Failed';
+        setTimeout(()=> copyBtn.textContent = 'Copy',1200);
+      }
+    });
+
+    shareBtn.addEventListener('click', ()=>{
+      const url = location.origin + location.pathname + location.hash;
+      navigator.clipboard.writeText(url).then(()=>{
+        shareBtn.textContent = 'URL Copied';
+        setTimeout(()=> shareBtn.textContent = 'Share (URL)',1200);
+      });
+    });
+
+    window.addEventListener('load', ()=>{
+      const h = location.hash;
+      if(h && h.startsWith('#joke=')){
+        const idx = parseInt(h.split('=')[1]);
+        if(!isNaN(idx) && idx >=0 && idx < jokes.length) showJ({i:idx,text:jokes[idx]});
+        else showJ(pick());
+      }else{
+        showJ(pick());
+      }
+    });
+
+    function confettiBurst(){
+      const box = document.getElementById('confetti');
+      box.innerHTML = '';
+      for(let i=0;i<18;i++){
+        const s = document.createElement('span');
+        s.style.left = (5 + Math.random()*90) + '%';
+        s.style.background = ['#ff7ab6','#7afcff','#ffd36b','#8bff9e'][Math.floor(Math.random()*4)];
+        s.style.transform = 'translateY(-20px) rotate(' + (Math.random()*360) + 'deg)';
+        s.style.animationDelay = (i*30)+'ms';
+        box.appendChild(s);
+      }
+      setTimeout(()=> box.innerHTML='',1500);
+    }
+  </script>
+</body>
+</html>
